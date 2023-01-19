@@ -1,6 +1,8 @@
 <div class="containerBox">
   <div class="navigation">
-    <div class="logo"></div>
+    <div class="logo">
+      <img src="../assets/imgs/logo-viacredi-2.svg" alt="Ailos" />
+    </div>
     <div class="menu">
       <mat-icon>menu</mat-icon>
       <mat-icon>search</mat-icon>
@@ -10,125 +12,14 @@
       <mat-icon>account_balance</mat-icon>
     </div>
   </div>
+
   <div class="containerBox_page">
-    <div class="topBar">
-      <div class="topBar_text">
-        <div class="title">nova admissão cooperado</div>
-        <div class="topBar_nav">
-          cadastro / admissão do cooperado / nova admissão de cooperado
-        </div>
-      </div>
-      <div class="topBar_actions">
-        <mat-icon class="topBarIcon">notifications_none</mat-icon>
-        <button class="btn_top">viacredi</button>
-        <img src="../assets/imgs/img_avatar.png" alt="Avatar" class="avatar" />
-      </div>
-    </div>
+    <app-top-bar></app-top-bar>
+
     <div class="content">
-      <!-- <mat-horizontal-stepper labelPosition="bottom">
-        <mat-step label="Início"> Step 1 content </mat-step>
-        <mat-step label="Documentos"> Step 2 content </mat-step>
-        <mat-step label="dados cadastrais"> You are now done. </mat-step>
-        <mat-step label="admissão"> You are now done. </mat-step>
-      </mat-horizontal-stepper> -->
-
-      <div class="timeline">
-        <mat-horizontal-stepper labelPosition="bottom">
-          <mat-step label="Início"> Step 1 content </mat-step>
-          <mat-step label="Documentos"> Step 2 content </mat-step>
-          <mat-step label="dados cadastrais"> You are now done. </mat-step>
-          <mat-step label="admissão"> You are now done. </mat-step>
-        </mat-horizontal-stepper>
-      </div>
-
-      <div class="title">Informe o CPF do futuro cooperado(a)</div>
-      <div class="subtitle mb-4">
-        se necessário, você poderá duplicar uma conta existente ou retormar esse
-        cadastro futuramente.<br />
-        Digite apenas os números sem pontos ou traços.
-      </div>
-
-      <div class="row mb-4">
-        <form [formGroup]="formulario" class="d-flex" (ngSubmit)="onSubmit()">
-          <div class="col-3 me-3">
-            <label for="cpf">CPF</label>
-            <input
-              id="cpf"
-              name="cpf"
-              type="text"
-              class="form-control"
-              placeholder="000.000.000-00"
-              formControlName="cpf"
-              [attr.maxLength]="maxLength"
-              mask="000.000.000-00"
-              [value]="clearValue"
-            />
-
-            <p
-              class="alert alert-danger"
-              *ngIf="
-                ((registerFormControl.cpf.touched || submitted) &&
-                  registerFormControl.cpf.hasError('required')) ||
-                mgsLength
-              "
-            >
-              Por favor informe um CPF válido para consulta
-            </p>
-          </div>
-
-          <div class="col-2 mt-4">
-            <button type="submit" class="btns-primary">
-              Consultar por CPF
-            </button>
-          </div>
-        </form>
-      </div>
-
-      <!-- Cards-->
-      <div class="d-flex" *ngIf="showCard">
-        <app-card-component
-          [title]="'Situação cadastral do CPF'"
-          [subTitle]="'Consulta na Receita Federal'"
-          [iconUser]="'person'"
-          [labelName]="'Nome'"
-          [nameUser]="'Mariane de Souza Oliveira'"
-          [iconSituation]="'check_circle_outline'"
-          [titleSituation]="'Situação do CPF'"
-          [statusSituation]="'Regular'"
-        ></app-card-component>
-
-        <app-card-component
-          [title]="'Conta aplicação'"
-          [subTitle]="'Cooperativa Viacredi'"
-          [iconUser]="'person'"
-          [labelName]="'Número da conta'"
-          [nameUser]="'557932-4'"
-          [showActions]="true"
-          [textButton]="'Duplicar conta'"
-          (btnClick)="testOnClick()"
-        ></app-card-component>
-
-        <app-card-component
-          [title]="'Conta corrente'"
-          [subTitle]="'Cooperativa Viacredi'"
-          [iconUser]="'person'"
-          [labelName]="'Número da conta'"
-          [nameUser]="'778461-8'"
-          [showActions]="true"
-          [textButton]="'Duplicar conta'"
-          (btnClick)="testOnClick()"
-        ></app-card-component>
-      </div>
+      <router-outlet></router-outlet>
     </div>
 
-    <div class="footer">
-      <button type="button" class="btns-primary me-3">
-        Iniciar nova admissão
-      </button>
-
-      <button type="button" class="btns-secondary">Dicas para admissão</button>
-    </div>
+    <app-footer-bar></app-footer-bar>
   </div>
 </div>
-
-<router-outlet></router-outlet>

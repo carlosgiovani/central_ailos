@@ -11,9 +11,13 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatCardModule } from '@angular/material/card';
+import { MatBadgeModule } from '@angular/material/badge';
 
 import { NgxMaskModule, IConfig } from 'ngx-mask';
 import { CardComponentComponent } from './components/card-component/card-component.component';
+import { TopBarComponent } from './components/top-bar/top-bar.component';
+import { FooterBarComponent } from './components/footer-bar/footer-bar.component';
+import { HomeComponent } from './views/home/home.component';
 
 const maskConfigFunction: () => Partial<IConfig> = () => {
   return {
@@ -22,7 +26,7 @@ const maskConfigFunction: () => Partial<IConfig> = () => {
 };
 
 @NgModule({
-  declarations: [AppComponent, CardComponentComponent],
+  declarations: [AppComponent, CardComponentComponent, TopBarComponent, FooterBarComponent, HomeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -32,6 +36,7 @@ const maskConfigFunction: () => Partial<IConfig> = () => {
     MatStepperModule,
     MatCardModule,
     ReactiveFormsModule,
+    MatBadgeModule,
     NgxMaskModule.forRoot(maskConfigFunction),
   ],
   providers: [],
