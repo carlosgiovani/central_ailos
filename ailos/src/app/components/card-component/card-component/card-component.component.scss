@@ -1,0 +1,14 @@
+.card {
+  min-height: 220px;
+}
+.card{
+  min-width: 300px;
+  margin-right: 20px;
+  .title{
+    font-size: 14px;
+    font-weight: 100;
+  }
+  .item{
+    font-weight: bold;
+  }
+}
