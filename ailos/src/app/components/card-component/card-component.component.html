@@ -1,0 +1,30 @@
+<!-- Cards-->
+<div class="d-flex" *ngIf="!showCard">
+  <div class="card" style="width: 18rem">
+    <div class="card-body">
+      <h5 class="card-title">{{ title }}</h5>
+      <h6 class="card-subtitle mb-3 text-muted">{{ subTitle }}</h6>
+      <div class="row mb-4">
+        <div class="col-auto">
+          <mat-icon>{{ iconUser }}</mat-icon>
+        </div>
+        <div class="col">
+          <label class="title">{{ labelName }}</label>
+          <div class="item">{{ nameUser }}</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-auto">
+          <mat-icon>{{ iconSituation }}</mat-icon>
+        </div>
+        <div class="col">
+          <label>{{ titleSituation }}</label>
+          <div class="item">{{ statusSituation }}</div>
+        </div>
+      </div>
+      <button class="btns-link" (click)="onClick()">
+        {{ textButton }}
+      </button>
+    </div>
+  </div>
+</div>

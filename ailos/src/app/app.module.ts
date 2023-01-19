@@ -13,7 +13,7 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatCardModule } from '@angular/material/card';
 
 import { NgxMaskModule, IConfig } from 'ngx-mask';
-import { CardComponentComponent } from './components/card-component/card-component/card-component.component';
+import { CardComponentComponent } from './components/card-component/card-component.component';
 
 const maskConfigFunction: () => Partial<IConfig> = () => {
   return {

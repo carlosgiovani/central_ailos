@@ -19,38 +19,26 @@
         </div>
       </div>
       <div class="topBar_actions">
-        <button
-          mat-icon-button
-          aria-label="Example icon button with a vertical three dot icon"
-        >
-          <mat-icon>notifications_none</mat-icon>
-        </button>
+        <mat-icon class="topBarIcon">notifications_none</mat-icon>
         <button class="btn_top">viacredi</button>
         <img src="../assets/imgs/img_avatar.png" alt="Avatar" class="avatar" />
       </div>
     </div>
     <div class="content">
+      <!-- <mat-horizontal-stepper labelPosition="bottom">
+        <mat-step label="Início"> Step 1 content </mat-step>
+        <mat-step label="Documentos"> Step 2 content </mat-step>
+        <mat-step label="dados cadastrais"> You are now done. </mat-step>
+        <mat-step label="admissão"> You are now done. </mat-step>
+      </mat-horizontal-stepper> -->
+
       <div class="timeline">
-        <!-- timeline -->
-        <mat-horizontal-stepper
-          [linear]="false"
-          #stepper
-          labelPosition="bottom"
-        >
-          <mat-step label="Início" class="selected">
-            <p>primeira</p>
-          </mat-step>
-          <mat-step label="Documentos">
-            <p>segunda</p>
-          </mat-step>
-          <mat-step label="dados cadastrais">
-            <p>terceira</p>
-          </mat-step>
-          <mat-step label="admissão">
-            <p>quarta</p>
-          </mat-step>
+        <mat-horizontal-stepper labelPosition="bottom">
+          <mat-step label="Início"> Step 1 content </mat-step>
+          <mat-step label="Documentos"> Step 2 content </mat-step>
+          <mat-step label="dados cadastrais"> You are now done. </mat-step>
+          <mat-step label="admissão"> You are now done. </mat-step>
         </mat-horizontal-stepper>
-        <!-- timelien -->
       </div>
 
       <div class="title">Informe o CPF do futuro cooperado(a)</div>
@@ -97,7 +85,7 @@
       </div>
 
       <!-- Cards-->
-      <div class="d-flex" *ngIf="!showCard">
+      <div class="d-flex" *ngIf="showCard">
         <app-card-component
           [title]="'Situação cadastral do CPF'"
           [subTitle]="'Consulta na Receita Federal'"
