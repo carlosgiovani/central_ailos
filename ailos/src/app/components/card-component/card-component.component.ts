@@ -6,7 +6,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./card-component.component.scss'],
 })
 export class CardComponentComponent {
-  @Input() showCard = false;
+  @Input() showCard!: boolean;
   @Input() showActions = false;
   @Input() title!: string;
   @Input() subTitle!: string;

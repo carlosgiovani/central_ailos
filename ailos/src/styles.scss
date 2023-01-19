@@ -7,13 +7,6 @@
 }
 
 
-
-.color{
-  &-primary{
-
-  }
-}
-
 *{
   margin: 0;
   padding: 0;
@@ -86,8 +79,6 @@ body{
   color: var(--color-text-blue);
 }
 
-
-
 /* BUTTONS */
 .btns{
   &-primary{
@@ -118,7 +109,6 @@ body{
 }
 
 
-
 /* TIME LINE */
 .timeline {
   width: 100%;
@@ -129,9 +119,6 @@ body{
   background-color: transparent;
   width: 60%;
 }
-// .mat-horizontal-stepper-header {
-//   pointer-events: none !important;
-// }
 
 .mat-step-icon-selected {
   background-color: transparent !important;
@@ -142,20 +129,3 @@ body{
   background-color: rgba(0,0,0,.54);
   color: transparent;
 }
-// .mat-step-header .mat-step-label.mat-step-label-active {
-//   color: gray;
-//   text-transform: capitalize;
-//   font-size: 0.9rem;
-// }
-// .mat-stepper-label-position-bottom .mat-horizontal-stepper-header:not(:last-child)::after{
-//   top: 11px;
-// }
-// .mat-stepper-horizontal-line {
-//   margin: 11px -39px !important;
-// }
-// .mat-stepper-label-position-bottom .mat-horizontal-stepper-header:not(:first-child)::before{
-//   top: 11px;
-// }
-
-
-
