@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,7 +27,13 @@ const maskConfigFunction: () => Partial<IConfig> = () => {
 };
 
 @NgModule({
-  declarations: [AppComponent, CardComponentComponent, TopBarComponent, FooterBarComponent, HomeComponent],
+  declarations: [
+    AppComponent,
+    CardComponentComponent,
+    TopBarComponent,
+    FooterBarComponent,
+    HomeComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -37,6 +44,7 @@ const maskConfigFunction: () => Partial<IConfig> = () => {
     MatCardModule,
     ReactiveFormsModule,
     MatBadgeModule,
+    BrowserAnimationsModule,
     NgxMaskModule.forRoot(maskConfigFunction),
   ],
   providers: [],
